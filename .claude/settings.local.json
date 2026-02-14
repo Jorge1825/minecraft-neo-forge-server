@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(if [ -f .env ])",
+      "Bash(then cp .env .env.backup)",
+      "Bash(fi:*)",
+      "Bash(.env << 'EOF'\n# Configuración básica\nMINECRAFT_VERSION=1.21.1\nMINECRAFT_TYPE=NEOFORGE\nFORGE_VERSION=21.1.219\n\n# Información del servidor\nMINECRAFT_SERVER_NAME=Alpes Minecraft\nMINECRAFT_MOTD=Alpes Minecraft\n\n# Configuración de red\nPORT=25585\n\n# Configuración de jugadores\nMINECRAFT_MAX_PLAYERS=10\nMINECRAFT_VIEW_DISTANCE=10\n\n# Configuración de juego\nMINECRAFT_DIFFICULTY=normal\nMINECRAFT_GAME_MODE=survival\nMINECRAFT_FORCE_GAMEMODE=false\nMINECRAFT_PVP=true\nMINECRAFT_HARDCORE=false\n\n# Configuración de mundo\nMINECRAFT_ALLOW_NETHER=true\nMINECRAFT_GENERATE_STRUCTURES=true\nMINECRAFT_MAX_WORLD_SIZE=10000\nMINECRAFT_MAX_BUILD_HEIGHT=256\nMINECRAFT_MAX_TICK_TIME=60000\n\n# Configuración de spawn\nMINECRAFT_SPAWN_ANIMALS=true\nMINECRAFT_SPAWN_MONSTERS=true\nMINECRAFT_SPAWN_NPCS=true\nMINECRAFT_ANNOUNCE_PLAYER_ACHIEVEMENTS=true\n\n# Configuración técnica\nMINECRAFT_ONLINE_MODE=true\nMINECRAFT_PLAYER_IDLE_TIMEOUT=0\nMINECRAFT_SNOOPER_ENABLED=false\nMINECRAFT_ENABLE_COMMAND_BLOCK=false\nMINECRAFT_GUI=false\nMINECRAFT_ENABLE_AUTOPAUSE=false\n\n# Configuración de memoria\nMINECRAFT_INIT_MEMORY=1G\nMINECRAFT_MAX_MEMORY=5G\n\n# RCON\nSERVICE_PASSWORD_RCON=wbvC4bCi3bYSzfks9yjOYScogAz4paZA\n\n# CurseForge\nCF_API_KEY=$2a$10$QHx6TLYkrh2vn6qwTz4spu.9DE1z.ZlY1kMuLpWhjzcMpC.w41WNW\nEOF)",
+      "Bash(docker-compose:*)",
+      "Bash(docker-compose up:*)"
+    ]
+  }
+}

@@ -6,7 +6,7 @@ services:
     environment:
       - EULA=true
       - 'VERSION=${MINECRAFT_VERSION:-latest}'
-      - 'TYPE=${MINECRAFT_TYPE:-FORGE}'
+      - 'TYPE=${MINECRAFT_TYPE:-NEOFORGE}'
       - 'FORGEVERSION=${FORGE_VERSION:-21.1.219}'
       - 'SERVER_NAME=${MINECRAFT_SERVER_NAME:-Minecraft Server}'
       - 'MOTD=${MINECRAFT_MOTD:-Minecraft Server powered by §aCoolify§r}'

@@ -58,6 +58,15 @@ Para agregar mods al servidor:
 
 **Nota:** Asegúrate de que los mods sean compatibles con la versión de NeoForge especificada en `FORGE_VERSION`.
 
+## ⚠️ IMPORTANTE: Compatibilidad de Cliente
+
+Para conectarte al servidor, **tu cliente de Minecraft DEBE tener exactamente**:
+
+- **Minecraft 1.21.1** (no 1.21, no 1.21.0, no 1.21.2)
+- **NeoForge 21.1.219** (no otra versión)
+
+Si no puedes conectarte con el error "Incompatible client!", revisa la guía [TROUBLESHOOTING.md](TROUBLESHOOTING.md) para instrucciones detalladas.
+
 ## Acceso a la consola
 
 Para acceder a la consola del servidor:

@@ -1,0 +1,15 @@
+# Configuración de NeoForge Server para permitir conexiones más flexibles
+
+[server]
+# Deshabilitar la verificación estricta de versiones de mods
+# Esto permite conectar incluso si el cliente no tiene exactamente los mismos mods
+enforceSecureProfile = false
+
+[connection]
+# Permitir conexiones sin verificar exactamente los mismos mods
+requireSignedMods = false
+
+[mods]
+# No requerir que el cliente tenga los mismos mods que el servidor
+# Advertencia: Esto puede causar problemas si se usan mods que afectan el gameplay
+clientSideOnly = true
