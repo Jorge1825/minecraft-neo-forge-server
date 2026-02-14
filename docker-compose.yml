@@ -39,13 +39,3 @@ services:
       - 'CF_API_KEY=${CF_API_KEY:-123}'
     volumes:
       - './minecraft-data:/data'
-    healthcheck:
-      test:
-        - CMD
-        - /usr/local/bin/mc-monitor
-        - status
-        - '--host'
-        - localhost
-      interval: 2s
-      timeout: 10s
-      retries: 15
