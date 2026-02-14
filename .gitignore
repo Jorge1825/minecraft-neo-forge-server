@@ -1,0 +1,27 @@
+# Datos del servidor de Minecraft
+minecraft-data/world/
+minecraft-data/world_nether/
+minecraft-data/world_the_end/
+minecraft-data/logs/
+minecraft-data/*.log
+minecraft-data/*.txt
+minecraft-data/server.properties
+minecraft-data/banned-players.json
+minecraft-data/banned-ips.json
+minecraft-data/ops.json
+minecraft-data/whitelist.json
+minecraft-data/usercache.json
+
+# Archivos de configuración locales
+.env
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
