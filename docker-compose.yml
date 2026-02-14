@@ -6,7 +6,7 @@ services:
     environment:
       - EULA=true
       - 'VERSION=${MINECRAFT_VERSION:-latest}'
-      - 'TYPE=${MINECRAFT_TYPE:-NEOFORGE}'
+      - 'TYPE=${MINECRAFT_TYPE:-FORGE}'
       - 'FORGEVERSION=${FORGE_VERSION:-21.1.219}'
       - 'SERVER_NAME=${MINECRAFT_SERVER_NAME:-Minecraft Server}'
       - 'MOTD=${MINECRAFT_MOTD:-Minecraft Server powered by §aCoolify§r}'
@@ -39,3 +39,13 @@ services:
       - 'CF_API_KEY=${CF_API_KEY:-123}'
     volumes:
       - './minecraft-data:/data'
+    healthcheck:
+      test:
+        - CMD
+        - /usr/local/bin/mc-monitor
+        - status
+        - '--host'
+        - localhost
+      interval: 2s
+      timeout: 10s
+      retries: 15
