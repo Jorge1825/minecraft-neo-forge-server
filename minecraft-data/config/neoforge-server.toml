@@ -1,15 +1,21 @@
-# Configuración de NeoForge Server para permitir conexiones más flexibles
+# Configuración de NeoForge Server 1.21.1
+# Este archivo permite conexiones más flexibles entre cliente y servidor
 
-[server]
-# Deshabilitar la verificación estricta de versiones de mods
-# Esto permite conectar incluso si el cliente no tiene exactamente los mismos mods
-enforceSecureProfile = false
+[clientSideOnly]
+# Permitir que el servidor funcione aunque el cliente no tenga los mismos mods
+# Cuidado: Esto puede causar problemas si se usan mods que afectan el gameplay
+allowServerListings = false
 
-[connection]
-# Permitir conexiones sin verificar exactamente los mismos mods
-requireSignedMods = false
+[forge]
+# No requerir firma de mods para conectar (experimental)
+disableVersionCheck = true
+# Permitir conexiones aunque el cliente tenga diferentes versiones de mods
+lazyLoadEntities = true
+sortRecipies = true
 
 [mods]
-# No requerir que el cliente tenga los mismos mods que el servidor
-# Advertencia: Esto puede causar problemas si se usan mods que afectan el gameplay
-clientSideOnly = true
+# Configuración de carga de mods
+```
+
+# Nota: En NeoForge 1.21.1, algunas de estas opciones pueden no estar disponibles
+# La verificación estricta de versiones está integrada en el núcleo de NeoForge
