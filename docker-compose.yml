@@ -46,6 +46,8 @@ services:
       - 'CF_API_KEY=${CF_API_KEY:-123}'
     volumes:
       - './minecraft-data:/data'
+      - './minecraft-data/mods:/mods' # Sincroniza la carpeta local minecraft-data/mods con la del contenedor
+      - './minecraft-data/config:/config' # Sincroniza la carpeta local minecraft-data/config con la del contenedor
     healthcheck:
       test:
         - CMD
