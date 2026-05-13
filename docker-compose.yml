@@ -1,16 +1,19 @@
 services:
   mc:
-    image: itzg/minecraft-server
+    image: itzg/minecraft-server:latest
     ports:
       - '${PORT:-25565}:25565'
       - '${AUDIO_PORT:-25566}:25566'
       - '${AUDIO_PORT:-25566}:25566/tcp'
       - '${AUDIO_PORT:-25566}:25566/udp'
+    pull_policy: daily
+    tty: true
+    stdin_open: true
     environment:
       - EULA=true
       - 'VERSION=${MINECRAFT_VERSION:-latest}'
-      - 'TYPE=${MINECRAFT_TYPE:-FORGE}'
-      - 'FORGE_VERSION=${FORGE_VERSION:-47.4.10}'
+      - 'TYPE=${MINECRAFT_TYPE:-NEOFORGE}'
+      - 'NEOFORGE_VERSION=${NEOFORGE_VERSION:-beta}'
       - 'SERVER_NAME=${MINECRAFT_SERVER_NAME:-Minecraft Server}'
       - 'MOTD=${MINECRAFT_MOTD:-Minecraft Server powered by §aCoolify§r}'
       - 'DIFFICULTY=${MINECRAFT_DIFFICULTY:-normal}'
